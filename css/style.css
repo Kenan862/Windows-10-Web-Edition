@@ -1,0 +1,118 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background: url("../assets/background2.jpg") center / cover no-repeat;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+.desktop {
+  height: 93%;
+  width: 100%;
+}
+
+.taskbar {
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  height: 6%;
+  width: 99.7%;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.747);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 4px 0px 0px 1.5px;
+}
+
+.area_1 {
+  display: flex;
+  height: 100%;
+  width: 25%;
+}
+
+.start_btn {
+  padding: 20px;
+  background: url("../assets/start-white.svg") center / contain no-repeat;
+  background-size: 22px;
+  height: 100%;
+  width: 47px;
+}
+
+.start_btn:hover{
+  background: url("../assets/start-blue.svg") center / contain no-repeat;
+  background-size: 22px;
+  transition: 0.1s;
+}
+
+.start_btn:not(:hover){
+  transition: 0.1s;
+}
+
+#search {
+  outline: none;
+  width: 100%;
+  padding: 10px;
+}
+
+.area_2 {
+  padding-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 3px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+}
+
+.task_btt {
+  padding: 3px;
+  border-radius: 1px;
+  height: 100%;
+  width: 47px;
+  margin: 0px 1px;
+}
+
+.task_btt:hover{
+  background: rgba(130, 130, 130, 0.541);
+  transition: 0.2s;
+}
+
+.task_btt:not(:hover){
+  transition: 0.2s;
+}
+
+#task_view{
+  content: url("../assets/taskview.svg");
+  padding: 9px;
+}
+
+#app_1{
+  padding: 8px;
+  content: url("../assets/files.svg");
+}
+
+#app_2{
+  content: url("../assets/edge.svg");
+  padding: 4px;
+}
+
+#app_3{
+  content: url("../assets/outlook.svg");
+  padding: 3px;
+}
+
+
+.area_3 {
+  width: 25%;
+  height: 100%;
+}

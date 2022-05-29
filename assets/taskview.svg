@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="171px" height="126px" viewBox="0 0 171 126" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M0 0L171 0L171 126L0 126L0 0Z" id="path_1" />
+    <clipPath id="mask_1">
+      <use xlink:href="#path_1" />
+    </clipPath>
+  </defs>
+  <g id="taskview">
+    <path d="M0 0L171 0L171 126L0 126L0 0Z" id="Background" fill="#FFFFFF" fill-opacity="0" fill-rule="evenodd" stroke="none" />
+    <g clip-path="url(#mask_1)">
+      <g id="Group" transform="translate(1 1)">
+        <path d="M32 62L32 124L84.5 124L137 124L137 62L137 0L84.5 0L32 0L32 62L32 62ZM129 62L129 115L84.5 115L40 115L40 62L40 9L84.5 9L129 9L129 62L129 62Z" id="Shape" fill="#FFFFFF" fill-rule="evenodd" stroke="none" />
+        <path d="M0 62L0 113L14 113L28 113L28 109L28 105L18 105L8 105L8 62L8 19L18 19L28 19L28 15L28 11L14 11L0 11L0 62L0 62Z" id="Shape" fill="#FFFFFF" stroke="none" />
+        <path d="M141 15L141 19L151 19L161 19L161 62L161 105L151 105L141 105L141 109L141 113L155 113L169 113L169 62L169 11L155 11L141 11L141 15L141 15Z" id="Shape" fill="#FFFFFF" stroke="none" />
+      </g>
+    </g>
+  </g>
+</svg>
