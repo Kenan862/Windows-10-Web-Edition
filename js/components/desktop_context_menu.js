@@ -8,7 +8,7 @@ function desktop_context_menu() {
             items: {
                 "reload": {
                     name: "Reload System", 
-                    icon: "fa-arrows-rotate",
+                    icon: "fas fa-sync-alt",
                     callback: function(){
                         window.location.reload();
                     }
