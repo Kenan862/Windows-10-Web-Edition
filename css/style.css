@@ -10,7 +10,7 @@ body {
   justify-content: center;
   height: 100vh;
   background: url("../assets/background2.jpg") center / cover no-repeat;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   overflow: hidden;
 }
 
@@ -48,13 +48,13 @@ body {
   width: 47px;
 }
 
-.start_btn:hover{
+.start_btn:hover {
   background: url("../assets/start-blue.svg") center / contain no-repeat;
   background-size: 22px;
   transition: 0.1s;
 }
 
-.start_btn:not(:hover){
+.start_btn:not(:hover) {
   transition: 0.1s;
 }
 
@@ -82,45 +82,44 @@ body {
   margin: 0px 1px;
 }
 
-.task_btt:hover{
+.task_btt:hover {
   background: rgba(130, 130, 130, 0.541);
   transition: 0.2s;
 }
 
-.task_btt:not(:hover){
+.task_btt:not(:hover) {
   transition: 0.2s;
 }
 
-#task_view{
+#task_view {
   content: url("../assets/taskview.svg");
   padding: 11px;
 }
 
-#app_1{
+#app_1 {
   padding: 10px;
   content: url("../assets/files.svg");
 }
 
-#app_2{
+#app_2 {
   content: url("../assets/edge.svg");
   padding: 6px;
 }
 
-#app_3{
+#app_3 {
   content: url("../assets/outlook.svg");
   padding: 5px;
 }
 
-
 .area_3 {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   width: 25%;
   height: 100%;
 }
 
-.clock{
+.clock {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -131,16 +130,16 @@ body {
   cursor: default;
 }
 
-.clock:hover{
+.clock:hover {
   background: rgba(130, 130, 130, 0.541);
   transition: 0.2s;
 }
 
-.clock:not(:hover){
+.clock:not(:hover) {
   transition: 0.2s;
 }
 
-.act_btn{
+.act_btn {
   height: 100%;
   width: 10%;
   display: flex;
@@ -150,11 +149,47 @@ body {
   font-size: 17px;
 }
 
-.act_btn:hover{
+.act_btn:hover {
   background: rgba(130, 130, 130, 0.541);
   transition: 0.2s;
 }
 
-.act_btn:not(:hover){
+.act_btn:not(:hover) {
   transition: 0.2s;
+}
+
+.start_menu {
+  align-items: center;
+  overflow: hidden;
+  height: 500px;
+  width: 600px;
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.747);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  bottom: 6%;
+  margin: 5px;
+  display: none;
+}
+
+.panel_1{
+  height: 100%;
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.panel_2{
+  height: 100%;
+  width: 20%;
+}
+
+.panel_3{
+  height: 100%;
+  width: 70%;
 }

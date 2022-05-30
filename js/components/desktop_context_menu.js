@@ -8,7 +8,7 @@ function desktop_context_menu() {
             items: {
                 "reload": {
                     name: "Reload System", 
-                    icon: "fas fa-sync-alt",
+                    icon: "bi bi-arrow-clockwise",
                     callback: function(){
                         window.location.reload();
                     }
