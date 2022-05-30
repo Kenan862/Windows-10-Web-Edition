@@ -62,6 +62,8 @@ body {
   outline: none;
   width: 100%;
   padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px;
 }
 
 .area_2 {
@@ -119,7 +121,7 @@ body {
   height: 100%;
 }
 
-.clock {
+.t_clock {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -130,12 +132,12 @@ body {
   cursor: default;
 }
 
-.clock:hover {
+.t_clock:hover {
   background: rgba(130, 130, 130, 0.541);
   transition: 0.2s;
 }
 
-.clock:not(:hover) {
+.t_clock:not(:hover) {
   transition: 0.2s;
 }
 
@@ -176,7 +178,7 @@ body {
   display: none;
 }
 
-.panel_1{
+.panel_1 {
   height: 100%;
   width: 10%;
   display: flex;
@@ -184,12 +186,105 @@ body {
   align-items: center;
 }
 
-.panel_2{
+.panel_2 {
   height: 100%;
   width: 20%;
 }
 
-.panel_3{
+.panel_3 {
   height: 100%;
   width: 70%;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -11em;
+  width: 6em;
+  min-height: 30em;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  background: rgba(0, 0, 0, 0.67);
+  color: #ecf0f1;
+  transition: left 0.5s ease;
+}
+.box .logo img {
+  display: block;
+  width: 100%;
+}
+.box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.box li {
+  display: block;
+  width: 100%;
+}
+.box a {
+  display: block;
+  width: 100%;
+  padding: 1em 1em;
+  text-align: center;
+  text-decoration: none;
+  color: #999;
+}
+.box a:hover {
+  background: #fff;
+  background: rgba(250, 250, 250, 0.1);
+  text-decoration: none;
+  color: #ecf0f1;
+}
+.box .icon {
+  display: block;
+  width: 100%;
+  font-size: 3em;
+}
+.date {
+  position: absolute;
+  bottom: 3em;
+  right: 3em;
+  min-width: 22em;
+  padding: 1em 0.5em;
+  line-height: 2em;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  background: #000;
+  background: rgba(0, 0, 0, 0.6);
+  color: #eee;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+.clock {
+  font-size: 4em;
+  display: inline-block;
+  padding: 0.5em;
+  float: left;
+}
+.day {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  margin-top: 1em;
+  text-align: center;
+}
+.day li {
+  font-size: 1.5em;
+}
+.showClock {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease;
+}
+.show {
+  left: 0;
+  transition: left 0.5s ease;
 }

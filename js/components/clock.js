@@ -11,7 +11,7 @@ function clock() {
             
             seconds = time.getSeconds();
         
-        document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes);
+        document.querySelectorAll('.t_clock')[0].innerHTML = harold(hours) + ":" + harold(minutes);
           
           function harold(standIn) {
             if (standIn < 10) {
