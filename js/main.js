@@ -11,7 +11,7 @@ $(document).ready(() => {
   battery();
   start_menu();
   $(document).one("click", "body", full_screen);
-  $(document).contextmenu(()=>{
-        desktop_context_menu();
+  $(document).contextmenu(() => {
+    desktop_context_menu();
   });
 });
