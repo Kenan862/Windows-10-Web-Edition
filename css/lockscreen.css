@@ -1,0 +1,80 @@
+.photo {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.times {
+    padding: 1rem;
+    margin-bottom: 4rem;
+    margin-left: 4rem;
+    grid-area: 5/1/5/2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    text-align: right;
+    color: white;
+    /* font-size: 5rem; */
+    /* border: 4px solid white; */
+}
+
+.time {
+    text-align: center;
+    color: white;
+    font-size: 1rem;
+    /* border: 4px solid white; */
+}
+
+.times .t {
+    margin: 0;
+    padding: 0;
+    font-size: 7rem;
+    text-align: left;
+}
+
+.times .d {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    font-size: 1.8rem;
+}
+
+@media screen and (max-width:768px) {
+    .photo {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.607)), url(https://source.unsplash.com/random/);
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+    .times {
+        margin: 0;
+        padding: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-weight: 100;
+        text-align: center;
+        color: white;
+        /* border: 4px solid white; */
+    }
+    .time {
+        display: none;
+        /* text-align: center;
+        color: white;
+        font-size: 1rem;
+        border: 4px solid white; */
+    }
+    .times .t {
+        font-size: 5rem;
+        text-align: center;
+    }
+    .times .d {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+}

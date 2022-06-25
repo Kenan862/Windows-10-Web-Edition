@@ -1,20 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,700,700italic);
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
-  flex-direction: column;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  background: url("../assets/background2.jpg") center / cover no-repeat;
   font-family: 'Open Sans', sans-serif;
   overflow: hidden;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+main{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url("../assets/background2.jpg") center / cover no-repeat;
+}
+
+.preloader{
+  padding-top: 90px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  cursor: none;
+}
+
+.icon_preloader img{
+ height: 280px;
+}
+
+.loader img{
+  margin-top: 200px;
+  height: 65px;
 }
 
 .desktop {
+  overflow: hidden;
   height: 93%;
   width: 100%;
 }
@@ -24,9 +61,9 @@ body {
   border-radius: 5px;
   display: flex;
   align-items: center;
-  height: 6%;
+  height: 5.5%;
   width: 99.7%;
-  /* From https://css.glass */
+  transform: translateY(5px);
   background: rgba(0, 0, 0, 0.747);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -42,21 +79,22 @@ body {
 }
 
 .start_btn {
-  padding: 20px;
-  background: url("../assets/start-white.svg") center / contain no-repeat;
-  background-size: 22px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
   height: 100%;
   width: 47px;
 }
 
 .start_btn:hover {
-  background: url("../assets/start-blue.svg") center / contain no-repeat;
-  background-size: 22px;
-  transition: 0.1s;
+  color: #006aff;
+  transition: 0.2s;
 }
 
 .start_btn:not(:hover) {
-  transition: 0.1s;
+  transition: 0.2s;
 }
 
 #search {
@@ -96,22 +134,26 @@ body {
 
 #task_view {
   content: url("../assets/taskview.svg");
-  padding: 11px;
+  padding: 8px;
 }
 
 #app_1 {
-  padding: 10px;
+  padding: 8px;
   content: url("../assets/files.svg");
 }
 
 #app_2 {
   content: url("../assets/edge.svg");
-  padding: 6px;
+  padding: 4px;
 }
 
 #app_3 {
-  content: url("../assets/outlook.svg");
-  padding: 5px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-align: center;
+ color: #fff;
+ font-size: 20px;
 }
 
 .area_3 {
@@ -199,6 +241,7 @@ body {
 }
 
 @import url(https://pro.fontawesome.com/releases/v5.11.2/css/all.css);
+
 :root {
   --user-button-circle: rgba(0, 0, 0, 0.025);
   --user-button-cardborder: rgba(255, 255, 255, 0.25);
@@ -215,41 +258,51 @@ body {
   -webkit-animation: slide 3s ease-out forwards;
   animation: slide 3s ease-out forwards;
 }
+
 @-webkit-keyframes slide {
+
   0%,
   50% {
     opacity: 0;
     display: block !important;
   }
+
   100% {
     opacity: 1;
     display: block !important;
   }
 }
+
 @keyframes slide {
+
   0%,
   50% {
     opacity: 0;
     display: block !important;
   }
+
   100% {
     opacity: 1;
     display: block !important;
   }
 }
+
 #user-button .u-card {
   border-radius: 100%;
   box-shadow: 0 0 1rem -0.25rem var(--user-button-shadow),
     inset 0 0 1rem -0.75rem var(--user-button-shadow);
 }
+
 #user-button .u-main {
   cursor: pointer;
   --user-button-background: var(--user-button-main, #ec87c0);
 }
+
 #user-button .u-main img {
   height: 100%;
   width: 100%;
 }
+
 #user-button .u-main iframe {
   position: absolute;
   top: 0;
@@ -259,6 +312,7 @@ body {
   opacity: 1;
   transition: 0s 4s;
 }
+
 #user-button .u-icons {
   position: relative;
   z-index: 950;
@@ -279,6 +333,7 @@ body {
      backdrop-filter: blur(10px);
   }*/
 }
+
 #user-button .u-icons a {
   color: inherit;
   display: grid;
@@ -287,16 +342,17 @@ body {
   height: 30px;
   text-decoration: none;
 }
+
 #user-button .u-icons a div {
   padding: 0.5rem;
   transition: 0s;
 }
-#user-button .u-icons a[href="https://twitter.com/Osorpenke"]
-{
+
+#user-button .u-icons a[href="https://twitter.com/Osorpenke"] {
   position: relative;
 }
-#user-button .u-icons a[href="https://twitter.com/Osorpenke"]:before
-{
+
+#user-button .u-icons a[href="https://twitter.com/Osorpenke"]:before {
   content: "Middle Click";
   position: absolute;
   top: -1.5rem;
@@ -311,47 +367,54 @@ body {
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
 }
-#user-button .u-icons a[href="https://twitter.com/Osorpenke"].show:before
-{
+
+#user-button .u-icons a[href="https://twitter.com/Osorpenke"].show:before {
   opacity: 1;
   transition: 0.25s ease-out;
 }
-#user-button .u-icons a[href="https://twitter.com/Osorpenke"] div
-{
+
+#user-button .u-icons a[href="https://twitter.com/Osorpenke"] div {
   color: #1da1f2;
 }
-#user-button .u-icons a[href="https://codepen.io/z-"] div
-{
+
+#user-button .u-icons a[href="https://codepen.io/z-"] div {
   background: black;
   color: white;
 }
+
 #user-button .u-icons a.u-random div {
   position: relative;
   top: -1px;
   -webkit-animation: diespin 2s linear infinite;
   animation: diespin 2s linear infinite;
 }
+
 @-webkit-keyframes diespin {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 @keyframes diespin {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
+
 #user-button .u-icons a.u-random:not(:hover) div {
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
-#user-button .u-icons > * {
+
+#user-button .u-icons>* {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -361,66 +424,79 @@ body {
   transform: translate(-50%, -50%);
   transition: 0.25s -0.05s;
 }
-#user-button .u-icons > *:before {
+
+#user-button .u-icons>*:before {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#user-button .u-icons > *:hover,
-#user-button .u-icons > *:focus-within {
+
+#user-button .u-icons>*:hover,
+#user-button .u-icons>*:focus-within {
   background: var(--hcolour);
 }
-#user-button .u-icons > *:first-child:nth-last-child(1):nth-child(1),
-#user-button .u-icons > *:first-child:nth-last-child(1) ~ *:nth-child(1) {
+
+#user-button .u-icons>*:first-child:nth-last-child(1):nth-child(1),
+#user-button .u-icons>*:first-child:nth-last-child(1)~*:nth-child(1) {
   left: 25%;
   top: 25%;
 }
-#user-button .u-icons > *:first-child:nth-last-child(2):nth-child(1),
-#user-button .u-icons > *:first-child:nth-last-child(2) ~ *:nth-child(1) {
+
+#user-button .u-icons>*:first-child:nth-last-child(2):nth-child(1),
+#user-button .u-icons>*:first-child:nth-last-child(2)~*:nth-child(1) {
   left: 37.5%;
   top: 18.75%;
 }
-#user-button .u-icons > *:first-child:nth-last-child(2):nth-child(2),
-#user-button .u-icons > *:first-child:nth-last-child(2) ~ *:nth-child(2) {
+
+#user-button .u-icons>*:first-child:nth-last-child(2):nth-child(2),
+#user-button .u-icons>*:first-child:nth-last-child(2)~*:nth-child(2) {
   left: 18.75%;
   top: 37.5%;
 }
-#user-button .u-icons > *:first-child:nth-last-child(3):nth-child(1),
-#user-button .u-icons > *:first-child:nth-last-child(3) ~ *:nth-child(1) {
+
+#user-button .u-icons>*:first-child:nth-last-child(3):nth-child(1),
+#user-button .u-icons>*:first-child:nth-last-child(3)~*:nth-child(1) {
   left: 50%;
   top: 15.625%;
 }
-#user-button .u-icons > *:first-child:nth-last-child(3):nth-child(2),
-#user-button .u-icons > *:first-child:nth-last-child(3) ~ *:nth-child(2) {
+
+#user-button .u-icons>*:first-child:nth-last-child(3):nth-child(2),
+#user-button .u-icons>*:first-child:nth-last-child(3)~*:nth-child(2) {
   left: 25%;
   top: 25%;
 }
-#user-button .u-icons > *:first-child:nth-last-child(3):nth-child(3),
-#user-button .u-icons > *:first-child:nth-last-child(3) ~ *:nth-child(3) {
+
+#user-button .u-icons>*:first-child:nth-last-child(3):nth-child(3),
+#user-button .u-icons>*:first-child:nth-last-child(3)~*:nth-child(3) {
   left: 15.625%;
   top: 50%;
 }
-#user-button .u-icons > *:first-child:nth-last-child(4):nth-child(1),
-#user-button .u-icons > *:first-child:nth-last-child(4) ~ *:nth-child(1) {
+
+#user-button .u-icons>*:first-child:nth-last-child(4):nth-child(1),
+#user-button .u-icons>*:first-child:nth-last-child(4)~*:nth-child(1) {
   left: 62.5%;
   top: 18.75%;
 }
-#user-button .u-icons > *:first-child:nth-last-child(4):nth-child(2),
-#user-button .u-icons > *:first-child:nth-last-child(4) ~ *:nth-child(2) {
+
+#user-button .u-icons>*:first-child:nth-last-child(4):nth-child(2),
+#user-button .u-icons>*:first-child:nth-last-child(4)~*:nth-child(2) {
   left: 37.5%;
   top: 18.75%;
 }
-#user-button .u-icons > *:first-child:nth-last-child(4):nth-child(3),
-#user-button .u-icons > *:first-child:nth-last-child(4) ~ *:nth-child(3) {
+
+#user-button .u-icons>*:first-child:nth-last-child(4):nth-child(3),
+#user-button .u-icons>*:first-child:nth-last-child(4)~*:nth-child(3) {
   left: 18.75%;
   top: 37.5%;
 }
-#user-button .u-icons > *:first-child:nth-last-child(4):nth-child(4),
-#user-button .u-icons > *:first-child:nth-last-child(4) ~ *:nth-child(4) {
+
+#user-button .u-icons>*:first-child:nth-last-child(4):nth-child(4),
+#user-button .u-icons>*:first-child:nth-last-child(4)~*:nth-child(4) {
   left: 18.75%;
   top: 62.5%;
 }
+
 #user-button:hover .u-icons,
 #user-button:focus-within .u-icons {
   width: 300% !important;
@@ -433,6 +509,7 @@ body {
   left: 20px;
   color: #fff;
 }
+
 .options {
   display: flex;
   flex-direction: row;
@@ -443,38 +520,47 @@ body {
   width: calc(100% - 100px);
   height: 400px;
 }
+
 @media screen and (max-width: 718px) {
   .options {
     min-width: 520px;
   }
+
   .options .option:nth-child(5) {
     display: none;
   }
 }
+
 @media screen and (max-width: 638px) {
   .options {
     min-width: 440px;
   }
+
   .options .option:nth-child(4) {
     display: none;
   }
 }
+
 @media screen and (max-width: 558px) {
   .options {
     min-width: 360px;
   }
+
   .options .option:nth-child(3) {
     display: none;
   }
 }
+
 @media screen and (max-width: 478px) {
   .options {
     min-width: 280px;
   }
+
   .options .option:nth-child(2) {
     display: none;
   }
 }
+
 .options .option {
   position: relative;
   overflow: hidden;
@@ -486,24 +572,31 @@ body {
   cursor: pointer;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
+
 .options .option:nth-child(1) {
   --defaultBackground: #ed5565;
 }
+
 .options .option:nth-child(2) {
   --defaultBackground: #fc6e51;
 }
+
 .options .option:nth-child(3) {
   --defaultBackground: #ffce54;
 }
+
 .options .option:nth-child(4) {
   --defaultBackground: #2ecc71;
 }
+
 .options .option:nth-child(5) {
   --defaultBackground: #5d9cec;
 }
+
 .options .option:nth-child(6) {
   --defaultBackground: #ac92ec;
 }
+
 .options .option.active {
   flex-grow: 10000;
   transform: scale(1);
@@ -515,34 +608,42 @@ body {
      transform:scale(0.9);
   }*/
 }
+
 .options .option.active .shadow {
   box-shadow: inset 0 -120px 120px -120px black,
     inset 0 -120px 120px -100px black;
 }
+
 .options .option.active .label {
   bottom: 20px;
   left: 20px;
 }
-.options .option.active .label .info > div {
+
+.options .option.active .label .info>div {
   left: 0px;
   opacity: 1;
 }
+
 .options .option:not(.active) {
   flex-grow: 1;
   border-radius: 30px;
 }
+
 .options .option:not(.active) .shadow {
   bottom: -40px;
   box-shadow: inset 0 -120px 0px -120px black, inset 0 -120px 0px -100px black;
 }
+
 .options .option:not(.active) .label {
   bottom: 10px;
   left: 10px;
 }
-.options .option:not(.active) .label .info > div {
+
+.options .option:not(.active) .label .info>div {
   left: 20px;
   opacity: 0;
 }
+
 .options .option .shadow {
   position: absolute;
   bottom: 0px;
@@ -551,6 +652,7 @@ body {
   height: 120px;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
+
 .options .option .label {
   display: flex;
   position: absolute;
@@ -558,6 +660,7 @@ body {
   height: 40px;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 }
+
 .options .option .label .icon {
   display: flex;
   flex-direction: row;
@@ -570,6 +673,7 @@ body {
   background-color: white;
   color: var(--defaultBackground);
 }
+
 .options .option .label .info {
   display: flex;
   flex-direction: column;
@@ -578,14 +682,17 @@ body {
   color: white;
   white-space: pre;
 }
-.options .option .label .info > div {
+
+.options .option .label .info>div {
   position: relative;
   transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95), opacity 0.5s ease-out;
 }
+
 .options .option .label .info .main {
   font-weight: bold;
   font-size: 1.2rem;
 }
+
 .options .option .label .info .sub {
   transition-delay: 0.1s;
 }
@@ -597,20 +704,21 @@ body {
   height: 45%;
   top: 20%;
   left: 20%;
-
+  display: none;
   margin: 0;
   padding: 0;
   z-index: 99;
   /* From https://css.glass */
-background: rgba(255, 255, 255, 0.2);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(5px);
--webkit-backdrop-filter: blur(5px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #title {
+  padding: 0px 0px 0px 5px;
   background: rgba(255, 255, 255, 0.2);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
@@ -620,14 +728,54 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 15px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 30px;
 }
 
+#content {
+  height: 100%;
+  background: #fff;
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+#close:hover {
+  background: #ff0000;
+  transition: 0.5s;
+}
+
+#close:not(:hover) {
+  transition: 0.5s;
+}
+
+.control:hover {
+  background: #808080;
+  transition: 0.5s;
+}
+
+.control:not(:hover) {
+  transition: 0.5s;
+}
 
 #ghostpane {
   background: #999;
   opacity: 0.2;
-
+  display: none;
   width: 45%;
   height: 45%;
   top: 20%;
@@ -644,3 +792,239 @@ border: 1px solid rgba(255, 255, 255, 0.3);
   -o-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
+
+.maximize_active {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.5s;
+}
+
+#context-menu {
+  user-select: none;
+  position: fixed;
+  z-index: 10000;
+  width: 200px;
+  background: #ffff;
+  border-radius: 5px;
+  transform: scale(0);
+  transform-origin: top left;
+  overflow: hidden;
+}
+
+#context-menu.active {
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
+}
+
+#context-menu .item {
+  padding: 8px 10px;
+  font-size: 15px;
+  color: #000000;
+}
+
+#context-menu .item:hover {
+  background: #d0d0d0;
+  transition: 0.1s;
+}
+
+#context-menu .item:not(:hover) {
+  transition: 0.1s;
+}
+
+#context-menu .item i {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#context-menu hr {
+  margin: 2px 0px;
+  border-color: #555;
+}
+
+.content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 280px;
+  width: 100%;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sbutton {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  background: #e62222;
+}
+
+.sbutton,
+.sbutton span {
+  transition: 200ms;
+}
+
+.sbutton .text {
+  transform: translateX(35px);
+  color: #fff;
+  font-weight: bold;
+}
+
+.sbutton .icon {
+  position: absolute;
+  border-left: 1px solid #c41b1b;
+  transform: translateX(110px);
+  height: 40px;
+  width: 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sbutton:hover {
+  background: #ff3636;
+}
+
+.sbutton:hover .text {
+  color: transparent;
+}
+
+.sbutton:hover .icon {
+  width: 150px;
+  border-left: none;
+  transform: translateX(0);
+}
+
+.sbutton:focus {
+  outline: none;
+}
+
+.fontAwesome {
+  font-family: Helvetica, 'FontAwesome', sans-serif;
+}
+
+.box {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  display: block;
+  width: 6em;
+  min-height: 30em;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: #000;
+  background: rgba(0, 0, 0, 0.67);
+  color: #ECF0F1;
+  transition: left 0.5s ease;
+  z-index: 102;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box .logo img {
+  display: block;
+  width: 100%;
+}
+
+.box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.box li {
+  display: block;
+  width: 100%;
+}
+
+.box a {
+  display: block;
+  width: 100%;
+  padding: 1em 1em;
+  text-align: center;
+  text-decoration: none;
+  color: #999;
+}
+
+.box a:hover {
+  background: #fff;
+  background: rgba(250, 250, 250, 0.1);
+  text-decoration: none;
+  color: #ECF0F1;
+}
+
+.box .icon {
+  display: block;
+  width: 100%;
+  font-size: 3em;
+}
+
+.date {
+  position: absolute;
+  bottom: 3em;
+  left: 3em;
+  min-width: 22em;
+  padding: 1em 0.5em;
+  line-height: 2em;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  background: #000;
+  background: rgba(0, 0, 0, 0.6);
+  color: #eee;
+  transition: all 1s ease;
+  overflow: hidden;
+}
+
+.clock {
+  font-size: 4em;
+  display: inline-block;
+  padding: 0.5em;
+  float: left;
+}
+
+.day {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.day li {
+  font-size: 1.5em;
+}
+
+.showClock {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease;
+}
+
+.show {
+  left: 92.5%;
+  transition: left 0.5s ease;
+}
+
