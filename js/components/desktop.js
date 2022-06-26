@@ -31,7 +31,7 @@ function desktop() {
     $("main").empty().append(`<div class="desktop"></div>
     <div class="taskbar">
         <div class="area_1">
-            <div class="start_btn"><i class="fab fa-windows fa-fw icon"></i></div>
+            <div class="start_btn"><i class="fab fa-windows"></i></div>
             <input type="text" id="search" placeholder="&#128269;&nbsp;Search the Windows WEB">
         </div>
         <div class="area_2">
@@ -69,7 +69,7 @@ function desktop() {
         $(document).on("click", "#app_3", settings);
         $(document).on("click", "#task_view", coming_soon);
 
-    }, 1000); // 5000    
+    }, 500);    
 }
 
 export{desktop}

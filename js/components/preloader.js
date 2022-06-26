@@ -10,7 +10,7 @@ function preloader() {
     
     setTimeout(() => {
     lockscreen();
-    }, 1); // 5000
+    }, 5000); // 5000
 }
 
 export{preloader}

@@ -1,5 +1,9 @@
 function settings() {
+  $("main").append(`
     
+`);
 }
 
-export{settings}
+export {
+  settings
+}

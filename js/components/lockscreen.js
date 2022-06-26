@@ -30,7 +30,7 @@ function lockscreen() {
     `);
 
      startTime();
-    load_desktop();
+    //  load_desktop();
 
     function startTime() {
         var today = new Date();
