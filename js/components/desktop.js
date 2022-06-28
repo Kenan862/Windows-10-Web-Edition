@@ -68,6 +68,15 @@ function desktop() {
         $(document).on("click", "#app_2", coming_soon);
         $(document).on("click", "#app_3", settings);
         $(document).on("click", "#task_view", coming_soon);
+        
+        Swal.fire({
+            title: 'New Update is coming soon!',
+            text: 'Get Ready for the next Windows WEB Update!',
+            imageUrl: '/assets/background.jpg',
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: 'Custom image',
+          })
 
     }, 500);    
 }
